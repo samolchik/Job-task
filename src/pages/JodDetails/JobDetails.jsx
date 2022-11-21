@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./jobDetails.css";
 import { Link, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { IoMdPin } from "react-icons/io";
 import { BsShareFill } from "react-icons/bs";
 import { BiEuro } from "react-icons/bi";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { MOCK } from "../../mock";
 import moment from "moment";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import "./jobDetails.css";
 
 export const JobDetails = () => {
   const { id } = useParams();

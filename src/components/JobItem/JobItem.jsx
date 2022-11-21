@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { IoMdPin } from "react-icons/io";
 import Rating from "../../assets/icons/Rating.svg";
@@ -8,14 +8,7 @@ import "./jobItem.css";
 
 export const JobItem = ({ post }) => {
   let [postSave, setPostSave] = useState(false);
-
   const posted = moment(post.createdAt).format("DD MMM, YYYY");
-
-  const navigate = useNavigate();
-  const openDetails = (id) => {
-
-    navigate(`/job-details/${post.id}`, {state: {id:post.id}})
-  }
 
   return (
     <li className="job__content">
@@ -24,9 +17,13 @@ export const JobItem = ({ post }) => {
       </div>
       <div className="job__info">
         <div>
-          <Link key={post.id} to={`/job-details/${post.id}`} state={{id:post.id}}  >
+          <Link
+            key={post.id}
+            to={`/job-details/${post.id}`}
+            state={{ id: post.id }}
+          >
             {" "}
-            <h3 onClick={openDetails} className="job__title">{post.title}</h3>{" "}
+            <h3 className="job__title">{post.title}</h3>{" "}
           </Link>
           <p className="job__name">{post.name}</p>
           <address className="job__address">
