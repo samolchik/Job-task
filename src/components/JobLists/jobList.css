@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 30px 260px;
+}
+
+.job {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: D8D8D8;
+}

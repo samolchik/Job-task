@@ -1,0 +1,126 @@
+.job__content {
+    position: relative;
+    padding: 24px 16px 24px 16px;
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    max-height: 189px;
+    background: #FFF;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, .08), 0px 2px 1px -1px rgba(0, 0, 0, .04), 0px 1px 3px rgba(0, 0, 0, .12);
+    border-radius: 8px;
+}
+
+.job__pictures {
+    padding-right: 26px;
+}
+
+.job__img {
+    width: 95px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+.job__info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.job__title {
+    max-width: 630px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #3A4562;
+    cursor: pointer;
+}
+
+.job__address,
+.job__name,
+.job__post-create {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+
+
+    color: #878D9D;
+}
+
+.job__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.job__icon-save {
+    display: flex;
+    margin-right: 8px;
+    width: 16px;
+    height: 20px;
+    color: #bfc0c1;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+
+}
+
+.job__post-rating {
+    display: none;
+}
+
+.job__icon-save:hover,
+.job__icon-save.active {
+    color: #2d5b89;
+    transform: scale(1.2);
+}
+
+@media (max-width: 680px) {
+
+    .job__content {
+        padding: 13px 16px 27px 16px;
+        max-width: 396px;
+        max-height: 206px;
+        background-color: #EFF0F5;
+    }
+
+    .job__pictures {
+        padding-top: 32px;
+    }
+
+    .job__img {
+        width: 70px;
+        height: 56px;
+    }
+
+    .job__info {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .job__post {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .job__title {
+        margin-top: 17px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .job__post-create {
+        font-size: 14px;
+    }
+
+    .icon-none {
+        display: none;
+    }
+
+    .job__post-rating {
+        display: flex;
+    }
+
+}
